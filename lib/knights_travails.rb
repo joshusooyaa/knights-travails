@@ -3,9 +3,9 @@ require_relative './knights-travails/knight'
 
 def knight_moves(start, destination)
   board = Board.new
-  knight = Knight.new()
+  knight = Knight.new(board)
 
-  knight.move(start, destination)
+  puts knight.shortest_path(start, destination)
 end
 
-knight_moves('A1', 'B2')
+knight_moves('A1', 'B1')
