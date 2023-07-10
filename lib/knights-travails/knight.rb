@@ -21,10 +21,6 @@ class Knight
 
   private
 
-  def add_square(square)
-    to_visit.append(square)
-  end
-
   def trace_path(square)
     path = ''
     path_size = -1

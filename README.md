@@ -18,12 +18,10 @@ Lastly, we'll need a way to represent the spots the knight can move to -- this c
 
 ## `Knight#move(square, destination)`
 ```
-until found
-  found if current square is destination
-  otherwise
-    find all possible moves from the square we're at (get all squares the knight can move to from current square)
-      create new nodes for these moves, and add them to the "to visit" queue
-    update the current square we're at with the next square in queue
+until current square is destination square
+  add all reachable squares from current square to a queue
+  set current square as visited (so it doesn't get added again)
+  update current square to next square in the queue
 ```
 
 
