@@ -12,9 +12,19 @@ Additionally, we want to return the path it took to get to get there. When we ge
 ### Classes
 To start, we need to know what components are necessary. We of course, need a board. To represent this, we can create a 2D array, containing 8 rows and 8 columns. We can represent each row with a letter of the alphabet, and each column with its respective index (how a normal chess board would work -- A1 - H8). 
 
-We'll also need a "knight", this class can contain the "nodes" or squares in which the knight plans to visit (using a queue), and an array containing the nodes the knight has already visited. The point of this second array is to avoid repeating squares.  
+We'll also need a "knight", this class can contain the "nodes" or squares in which the knight plans to visit (using a queue), and an array containing the nodes the knight has already visited. The point of this second array is to avoid repeating squares.
 
 Lastly, we'll need a way to represent the spots the knight can move to -- this can be done through a Node class. The Node class will need to consist of two components: parent and value (board spot).
+
+## `Knight#move(square, destination)`
+```
+until found
+  found if current square is destination
+  otherwise
+    find all possible moves from the square we're at (get all squares the knight can move to from current square)
+      create new nodes for these moves, and add them to the "to visit" queue
+    update the current square we're at with the next square in queue
+```
 
 
 
