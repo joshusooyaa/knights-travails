@@ -9,11 +9,14 @@ The way this can be done is through mimicking the way a tree works. Let's say we
 Additionally, we want to return the path it took to get to get there. When we get to a node, we want to make sure we can back track it to the root, so we'll give each nodes (in addition to 'children' pointers) a parenet pointer.
 
 # Pseudocode
+### Classes
 To start, we need to know what components are necessary. We of course, need a board. To represent this, we can create a 2D array, containing 8 rows and 8 columns. We can represent each row with a letter of the alphabet, and each column with its respective index (how a normal chess board would work -- A1 - H8). 
 
 We'll also need a "knight", this class can contain the "nodes" or squares in which the knight plans to visit (using a queue), and an array containing the nodes the knight has already visited. The point of this second array is to avoid repeating squares.  
 
-Lastly, we'll need a way to represent the spots the knight can move to -- this can be done through a Node class. The Node class will need to consist of three components: parent, value (board spot).
+Lastly, we'll need a way to represent the spots the knight can move to -- this can be done through a Node class. The Node class will need to consist of two components: parent and value (board spot).
+
+
 
 # Acknowledgements
 [The Odin Project](https://www.theodinproject.com/lessons/ruby-knights-travails)
